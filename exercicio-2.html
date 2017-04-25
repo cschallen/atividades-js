@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2 - Exercicio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <style>
+    .prev {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .next {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    .box{
+        padding: 20px;
+        margin: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercício 2</h1>
+        <div class="jumbotron">
+            <p>Preencher o dropdown com os valores do array com nome "arrayValues"</p>
+            <ul>
+                <li>Salvar o elemento SELECT que tem id="array", em uma variável</li>
+                <li>Gerar um OPTION para cada valor do array</li>
+                <li>Dica: função createElement do JS</li>
+                <li>Dica: função appendChild do JS, para passar valor da OPTION pro final do SELECT</li>
+            </ul>
+
+            <div class="box">
+                <select id="array">
+                    <option>Valores do Array</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p class="prev"><a class="btn btn-primary btn-lg" href="exercicio-1.html" role="button">Exercício Anterior</a></p>
+    <p class="next"><a class="btn btn-primary btn-lg" href="exercicio-3.html" role="button">Próximo Exercício</a></p>
+
+
+    <script>
+    var arrayValues = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+    // Código JS aqui
+    var selectValues = document.getElementById('array');
+
+    for(var i = 0; i < arrayValues.length; i++){
+        var option = document.createElement("option");
+        option.value = arrayValues[i];
+        option.text = arrayValues[i];
+        selectValues.appendChild(option);
+    }
+    </script>
+</body>
+</html>
